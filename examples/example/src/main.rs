@@ -3,10 +3,10 @@ use std::{fs::File, str::FromStr};
 use catppuccin::{Color, ColorIdent, Flavor, FlavorIdent, Hsl, Palette, Rgb, PALETTE};
 use strum::IntoEnumIterator;
 
-const MAIN_FLAVOUR: Flavor = PALETTE.mocha();
+const MAIN_FLAVOR: Flavor = PALETTE.mocha();
 
-const BG: Color = MAIN_FLAVOUR.base();
-const FG: Color = MAIN_FLAVOUR.text();
+const BG: Color = MAIN_FLAVOR.base();
+const FG: Color = MAIN_FLAVOR.text();
 
 fn main() {
     // loop through each color and flavor
