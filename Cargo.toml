@@ -1,0 +1,26 @@
+[package]
+name = "catppuccin"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0.196", features = ["derive"], optional = true }
+strum = { version = "0.26.1", optional = true }
+strum_macros = { version = "0.26.1", optional = true }
+
+[build-dependencies]
+case = "1.0.0"
+indexmap = { version = "2.2.2", features = ["serde"] }
+prettyplease = "0.2.16"
+proc-macro2 = "1.0.78"
+quote = "1.0.35"
+serde = "1.0.196"
+serde_json = "1.0.113"
+syn = "2.0.48"
+ureq = { version = "2.9.5", features = ["json"] }
+
+[features]
+serde = ["dep:serde"]
+strum = ["dep:strum", "dep:strum_macros"]
