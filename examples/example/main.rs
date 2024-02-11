@@ -30,7 +30,7 @@ fn main() {
 
     // import from json
     let mut palette: Palette =
-        serde_json::from_reader(File::open("palette.json").unwrap()).unwrap();
+        serde_json::from_reader(File::open("examples/example/palette.json").unwrap()).unwrap();
 
     // change color to blood red
     *palette.latte_mut().red_mut() = Color::new(
@@ -55,5 +55,9 @@ fn main() {
     // },
 
     // export to json
-    serde_json::to_writer_pretty(File::create("custom.json").unwrap(), &palette).unwrap();
+    serde_json::to_writer_pretty(
+        File::create("examples/example/custom.json").unwrap(),
+        &palette,
+    )
+    .unwrap();
 }
